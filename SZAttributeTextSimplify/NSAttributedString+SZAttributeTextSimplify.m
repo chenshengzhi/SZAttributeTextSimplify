@@ -66,6 +66,9 @@
         NSMutableParagraphStyle *paragraph = [[mutableAttrText attribute:NSParagraphStyleAttributeName
                                                                  atIndex:0
                                                           effectiveRange:nil] mutableCopy];
+        if (!paragraph) {
+            paragraph = [[NSMutableParagraphStyle alloc] init];
+        }
         paragraph.lineSpacing = lineSpacing;
         [mutableAttrText addAttribute:NSParagraphStyleAttributeName
                                 value:paragraph
@@ -80,6 +83,9 @@
         NSMutableParagraphStyle *paragraph = [[mutableAttrText attribute:NSParagraphStyleAttributeName
                                                                  atIndex:0
                                                           effectiveRange:nil] mutableCopy];
+        if (!paragraph) {
+            paragraph = [[NSMutableParagraphStyle alloc] init];
+        }
         paragraph.lineBreakMode = lineBreakMode;
         [mutableAttrText addAttribute:NSParagraphStyleAttributeName
                                 value:paragraph
