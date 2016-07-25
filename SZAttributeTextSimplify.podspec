@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SZAttributeTextSimplify"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "attributed text simplify"
   s.homepage     = "https://github.com/chenshengzhi/SZAttributeTextSimplify"
   s.license      = "MIT"

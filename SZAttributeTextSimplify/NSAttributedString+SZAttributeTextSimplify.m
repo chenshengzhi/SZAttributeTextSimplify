@@ -12,9 +12,13 @@
 
 - (NSAttributedString *(^)(NSAttributedString *attributedString))sp_append {
     return ^id(NSAttributedString *attributedString) {
-        NSMutableAttributedString *mutableAttrText = [self mutableCopy];
-        [mutableAttrText appendAttributedString:attributedString];
-        return mutableAttrText;
+        if (attributedString) {
+            NSMutableAttributedString *mutableAttrText = [self mutableCopy];
+            [mutableAttrText appendAttributedString:attributedString];
+            return mutableAttrText;
+        } else {
+            return self;
+        }
     };
 }
 

@@ -12,7 +12,11 @@
 
 - (NSString *(^)(NSString *anotherString))sp_append {
     return ^id(NSString *anotherString) {
-        return [[NSString alloc] initWithFormat:@"%@%@", self, anotherString];
+        if (anotherString) {
+            return [[NSString alloc] initWithFormat:@"%@%@", self, anotherString];
+        } else {
+            return self;
+        }
     };
 }
 
